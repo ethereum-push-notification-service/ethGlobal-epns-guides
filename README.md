@@ -1,1 +1,1 @@
-# ethGlobal-epns-guides
+# ethGlobal-push-guides
