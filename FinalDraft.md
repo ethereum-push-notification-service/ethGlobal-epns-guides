@@ -1,16 +1,31 @@
 # Final Submission Draft
 ---
 
-## What is EPNS
+## What's Push Protocol?
 
-## 1.Introduction Section
----
-Ethereum Push Notification Service (EPNS) is the world’s first decentralized communication & notification protocol for Web3.
+Push Protocol (Previously EPNS) is the world’s first decentralized communication & notification protocol for Web3.
 
 Using the protocol, any smart contract, dApp, or backend service can send on-chain or off-chain notifications tied to the wallet addresses of users in a gasless, multichain, open, and platform-agnostic way.
 
 Being an open communication middleware, notifications can be integrated and shown on any crypto wallet, mobile app, browser extension, or dApps enabling a native communication layer for Web3.0
 
+
+## Questions
+1. What layer of web3 is Push?
+    * Communication [✅]
+    * Computation
+    * Storage
+    * Data relay
+
+2. Does sending notification always require gas fees?
+    * Yes, Always
+    * No, (only for on-chain notifications) [✅]  
+
+3. What problem does Push aim to solve?
+    * Enable communication between Web3 users
+    * Protect users from spam and irregular communication and uphold user privacy
+    * Enable web3 and web3 users to interact using their wallet addresses in a decentralized fashion
+    * All of the above [✅]
 
 ## Questions
 1. What layer of web3 is EPNS?
@@ -52,17 +67,18 @@ Users who are not a subscriber of a particular channel, receive notifications fr
 ## Questions
 1. On which chain, does the channel creation happen?
     * Polygon
-    * Ethereum [✅]
+    * Ethereum [✅]  
     * None of the above.
 
 2. Can you send notifications only on Ethereum blockchain?
     * Yes, it’s restricted to the Ethereum blockchain only.
-    * No, EPNS notifications are chain-agnostic and not tied only to Ethereum chain. [✅]
+    * No, Push notifications are chain-agnostic and not tied only to Ethereum chain. [✅]
 
 2. What happens if the user receives notifications from an unsubscribed channel?
     *  The User will not get that Notification.
     *  The User will receive the notification in his/her inbox.
-    *  The Notification will go to the User's Spam Box. [✅]
+    *  The Notification will go to the User's Spam Box. [✅]  
+
 ---
 
 # Notifications
@@ -84,52 +100,53 @@ Delegated notifications is a feature that allows channel owners to delegate thei
 
 Once approved by the channel owner, a wallet address can send notifications on behalf of the channel to its subscribers. The channel owner can, however, revoke the approval at any given time.
 
-This mechanism of sending delegated notifications is quite effective in providing value-added services to the channels. It also ensures the availability of mechanisms that can be used by EPNS or any other third-party infrastructure to send on-chain notifications on the channel’s behalf.
+This mechanism of sending delegated notifications is quite effective in providing value-added services to the channels. It also ensures the availability of mechanisms that can be used by Push or any other third-party infrastructure to send on-chain notifications on the channel’s behalf.
 
 ## Questions
-1. Which one of these is false about EPNS Notifications?
-    * They can be sent for Ethereum-based projects only [✅]
+1. Which one of these is false about Push Notifications?
+    * They can be sent for Ethereum-based projects only [✅] 
     * They come with a clickable Call-to-Action link
     * They take almost no time to trigger
 
-2. What kind of notifications can you send through EPNS?
+2. What kind of notifications can you send through Push?
     * Subset
     * Broadcast
     * Targeted
-    * All of the above [✅]
+    * All of the above [✅] 
 
 3. Which one of the following is false about Delegated Notifications?
     * Channel owner can delegate notification sending power to any Wallet address
     * The Delegated wallet address can send notification on behalf of the channels
-    * Once approved, a delegated wallet address cannot be removed by channel owner. [✅]
+    * Once approved, a delegated wallet address cannot be removed by channel owner. [✅]  
     * Delegated notification are sent on the behalf of the channel address instead of the delegated wallet address.
+
 ---
-# EPNS Smart Contracts
+# Push Smart Contracts
 
-In order for the protocol to be chain-agnostic as well as truly decentralized, EPNS smart contracts play a major role.
-The EPNS Protocol has now been divided into two different smart contracts, i.e., EPNS Core & EPNS Communicator.
+In order for the protocol to be chain-agnostic as well as truly decentralized, Push smart contracts play a major role.
+The Push Protocol has now been divided into two different smart contracts, i.e., Push Core & Push Communicator.
 
-**1. EPNS Core Contract:**
-The EPNSCore protocol, as the name might indicate, is the main smart contract as it handles some of the most crucial features like Channel creation, governance, channel state changes as well as funds and incentive mechanisms, etc.
-It’s very important to note, however, that the EPNS Core smart contract will only be deployed on the Ethereum blockchain and not on any other chain.
+**1. Push Core Contract:**
+The PushCore protocol, as the name might indicate, is the main smart contract as it handles some of the most crucial features like Channel creation, governance, channel state changes as well as funds and incentive mechanisms, etc.
+It’s very important to note, however, that the Push Core smart contract will only be deployed on the Ethereum blockchain and not on any other chain.
 
-**2. EPNS Communicator Contract:**
-Unlike the EPNS Core smart contract, the communicator protocol is designed to be deployed on multiple chains. This is also one of the imperative reasons behind the communicator contract being lightweight and not reliant on the core contract.
+**2. Push Communicator Contract:**
+Unlike the Push Core smart contract, the communicator protocol is designed to be deployed on multiple chains. This is also one of the imperative reasons behind the communicator contract being lightweight and not reliant on the core contract.
 
-The EPNS Communicator protocol is comparatively quite simple. The communicator protocol includes features that allow users to subscribe to a channel, unsubscribe from a channel as well as the imperative one, i.e., sending notifications. As the communicator protocol can be deployed on various chains, it allows us to trigger notifications on multiple chains and not just the Ethereum blockchain.
+The Push Communicator protocol is comparatively quite simple. The communicator protocol includes features that allow users to subscribe to a channel, unsubscribe from a channel as well as the imperative one, i.e., sending notifications. As the communicator protocol can be deployed on various chains, it allows us to trigger notifications on multiple chains and not just the Ethereum blockchain.
 
 ## Questions
 1. Which contract is responsible for governance as well as incentive mechanisms?
-    * EPNS Core [✅]
-    * EPNS Communicator
-2. To what extent is EPNS Communicator contract dependent on EPNS Core?
+    * Push Core [✅] 
+    * Push Communicator
+2. To what extent is Push Communicator contract dependent on Push Core?
     * Very heavily dependent.
-    * Doesn't need to interact with core at all. [✅]
+    * Doesn't need to interact with core at all. [✅] 
 
-3. Which of the following is not true about EPNS Core contract
+3. Which of the following is not true about Push Core contract
     * It can only be deployed on Ethereum
     * Core contract deals with creation of channels
-    * Subscribing or unsubscribing features are built in the core contract.[✅]
+    * Subscribing or unsubscribing features are built in the core contract. [✅]
     * None of the above.
 
 ---
@@ -140,40 +157,40 @@ Push Nodes are the central piece of the network that enables the blockchain of W
 ![](https://i.imgur.com/zY9YqmS.png)
 
 ### 3 main tasks of Push Nodes
-1. **Listening**: Push Nodes listens to EPNS Communicator smart contracts on every blockchain. They also enable off-chain or direct communication via API calls either from a backend or a dApp. This enables EPNS to support just about any Web3 service… ie: smart contracts, dApps, backends or direct payloads.
+1. **Listening**: Push Nodes listens to EPNS Communicator smart contracts on every blockchain. They also enable off-chain or direct communication via API calls either from a backend or a dApp. This enables Push to support just about any Web3 service… ie: smart contracts, dApps, backends or direct payloads.
 
-2. Validating and Governing: The communication which is driven by the EPNS Communicator layers require validation. This validation involves ensuring that whether or not the channel exists, the channel is not spamming, the channel is cross-chain verified.le governance and to verify the existence of the channel.
+2. Validating and Governing: The communication which is driven by the Push Communicator layers require validation. This validation involves ensuring that whether or not the channel exists, the channel is not spamming, the channel is cross-chain verified.le governance and to verify the existence of the channel.
 3. Admitting to Network / Dispatching: Lastly, the Push Nodes admit these notifications that are tied to wallet address in the network which can then be tapped into by any crypto frontend / wallet to display them. The dispatch functionality is also present in these nodes to allow bridging of Web3 notifications to be displayed in Web2 apps in case the wallet / frontend / software wants to enable that instead of handling direct socket connection.
 
 
 ## Questions
-1. Which feature of Push Nodes enables EPNS protocol to support about any Web3 service?
+1. Which feature of Push Nodes enables Push protocol to support about any Web3 service?
     * Validating and Governing
-    * Listneing to on-chain and off-chain communication [✅]
+    * Listneing to on-chain and off-chain communication [✅] 
     * Dispatching
     * None of the above
-2. Does Push Node listen to EPNS Communicator smart contract on Ethereum blockchain only?
+2. Does Push Node listen to Push Communicator smart contract on Ethereum blockchain only?
     * Yes.
-    * No. [✅]
+    * No.  
 3. How is **Dispatch functionality of Push Nodes**, helpful?
     * Enables Gasless notifications
     * Bridges the gap between Web3 notifications and Web3 apps [✅]
     * Enhances speed of notification delivery
     * All of the above.
----
+
 ---
 
 ## 3.Development Guides Section
 ---
 # Creating a Channel
 
-Creating a channel is the very first step for sending notifications via EPNS.
+Creating a channel is the very first step for sending notifications via Push.
 
-Any wallet which activates itself on the EPNS Protocol to send a notification is called a Channel.
+Any wallet which activates itself on the Push Protocol to send a notification is called a Channel.
 
-Using the EPNS dApp or our smart contracts, anyone with a wallet address on the Ethereum network can create their own channel. It can be deployed on;
-* The Ethereum Mainnet (via[ Prod dApp](https://app.epns.io/)), or
-* Kovan Test Network (via [Staging dApp](https://staging-app.epns.io/))
+Using the Push dApp or our smart contracts, anyone with a wallet address on the Ethereum network can create their own channel. It can be deployed on;
+* The Ethereum Mainnet (via[ Prod dApp](https://app.push.org/)), or
+* Kovan Test Network (via [Staging dApp](https://staging.push.org/#/channels))
 
 ## Requirements for Setting Up a Channel
 Ideally, there are 6 crucial requirements for creating a Channel.
@@ -220,19 +237,20 @@ In order to set-up channel alias address for any preferred chain, one has to go 
 ## Questions:
 1. Is Creating a channel a mandatory step to receive notifications?
     * Yes, one cannot Receive notification without a Channel.
-    * No, channel is only required to Send notifications, not to receive them. [✅]
+    * No, channel is only required to Send notifications, not to receive them. [✅] 
 
 2. Which of the following indicates the significance of Channel Alias address?
    * An alias address helps send gas less Notifications
    * Alias address allows channel owner to delegate notification sending power easily.
-   * Alias address enables a channel to send notifications on more than one chain.[✅]
+   * Alias address enables a channel to send notifications on more than one chain. [✅]
    * Alias address allows channel to customize notification designs.
 
  3. Where does a channel need to verify its Alias Address?
    * Verification of alias address for any chain must happen on Ethereum chain only.
-   * On the selected chain for which Alias address was provided, during channel creation [✅]
+   * On the selected chain for which Alias address was provided, during channel creation [✅] 
    * It can be verified on any chain.
    * None of the above.
+
 ---
 # Sending Notifications
 
@@ -242,7 +260,7 @@ As per the current design of the protocol, there can be 3 main actors who can se
 
 3. **Delegate Notification Senders**: Channel owners can allow any particular wallet address to send notifications on behalf of his/her channel. This feature is called delegated notifications.
 
-4. **Notifications To Yourself**: The EPNS Communicator allows any address to send notifications to themselves 😃 It’s important to note, however, that the address sends the notification to themselves only.
+4. **Notifications To Yourself**: The Push Communicator allows any address to send notifications to themselves 😃 It’s important to note, however, that the address sends the notification to themselves only.
 
 > **Note:**
 > *Sending notifications is a **gasless** transaction and therefore notification senders need not pay any gas fee while sending notifications via the Dapp.*
@@ -252,43 +270,45 @@ As per the current design of the protocol, there can be 3 main actors who can se
 
 ## How to trigger and send notifications
 
-EPNS protocol provides many ways to trigger a notification. For instance, a channel owner or delegate can trigger notifications using:
+Push protocol provides many ways to trigger a notification. For instance, a channel owner or delegate can trigger notifications using:
 
-1. [EPNS Dapp](https://docs.epns.io/developers/developer-zone/sending-notifications/dapp-serverless-workflow)
+1. [Push Dapp](https://docs.epns.io/developers/developer-zone/sending-notifications/dapp-serverless-workflow)
 The dapp provides a simple user interface for channel owner to trigger any type of notification they want for their subscribers.
 
-2. [Using EPNS SDK](https://docs.epns.io/developers/developer-tooling/epns-sdk)
-Using the notification, one can not only send notifications of all types, but also fecth a notifications for wallet and use the sdk features to integrate notifications into their own frontends.
+2. [Using Push SDK](https://docs.epns.io/developers/developer-tooling/epns-sdk)
+Using the notification, one can not only send notifications of all types, but also fecth a notifications for wallet and use the SDK features to integrate notifications into their own frontends.
 
 3. [Using Subgraph](https://docs.epns.io/developers/developer-zone/sending-notifications/using-subgraph)
-EPNS has developed an in-house Helper Function specifically for The Graph Protocol that allows you to read events from the Subgraph and define notifications accordingly.
+Push has developed an in-house Helper Function specifically for The Graph Protocol that allows you to read events from the Subgraph and define notifications accordingly.
 Once defined, they will be stored on the Subgraph in a Long String format.
-EPNS Push Nodes can, later on, fetch the notifications defined on a Subgraph and push them accordingly to Subscribers of the Channel.
+Push Push Nodes can, later on, fetch the notifications defined on a Subgraph and push them accordingly to Subscribers of the Channel.
 
 4. [Using Showrunners](https://docs.epns.io/developers/developer-zone/sending-notifications/using-showrunners-scaffold-gasless)
-The showrunners framework is a scaffold that developers can use to build out notifications for their use cases. Showrunners framework provides the tools and helpers required for constructing the payload and sending the notification using the EPNS infrastructure.
+The showrunners framework is a scaffold that developers can use to build out notifications for their use cases. Showrunners framework provides the tools and helpers required for constructing the payload and sending the notification using the Push infrastructure.
 
 ## Questions:
 
 1. How can one trigger an on-chain transaction?
     * Using the dapp
-    * Using the EPNS Communicator Smart Contract [✅]
+    * Using the Push Communicator Smart Contract [✅] 
     * Using SDK
     * All of the above
 
 2. How can someone integrate notification viewing functionality in their own dapp?
-    * Using EPNS SDK [✅]
-    * using EPNS dapp
-    * Using EPNS Core smart contracts
+    * Using Push SDK [✅]  
+    * using Push dapp
+    * Using Push Core smart contracts
     * Cannot be integrated.
+
+
 ---
 # Receiving Notifications
 
 Receiving notifications is a fairly simple process and can be done very easily.
 
-As of now, EPNS allows you to receive notifications directly to your wallet addresses through the crypto front-ends, in the form of SNS Notifications etc.
+As of now, Push allows you to receive notifications directly to your wallet addresses through the crypto front-ends, in the form of SNS Notifications etc.
 
-## Receiving notifications via EPNS Crypto Front-ends
+## Receiving notifications via Push Crypto Front-ends
 * [Using EPNS dapp](https://app.epns.io/)
 * [Using extension](https://chrome.google.com/webstore/detail/epns-protocol-alpha/lbdcbpaldalgiieffakjhiccoeebchmg)
 * [Using Mobile App])(https://play.google.com/store/apps/details?id=io.epns.epns&hl=en&gl=US)
@@ -311,7 +331,7 @@ Integrating the SNS module into your code takes less than 10 mins and contains j
 
  **Step 3**: Once you set up this, you need to contact us by either shouting / tagging us on Discord or reaching out via the contact form. We need this as the SNS module requires whitelisting of your webhook endpoint.
 
-> [EPNS Boiler Plate](https://github.com/ethereum-push-notification-service/epns-sns-boilerplate) can also be used as a starting point to consume the feeds from the EPNS SNS Topic.
+> [Push Boiler Plate](https://github.com/ethereum-push-notification-service/epns-sns-boilerplate) can also be used as a starting point to consume the feeds from the Push SNS Topic.
 
 **Watch this quick video guide to ensure the right set-up**
 
@@ -321,21 +341,21 @@ Integrating the SNS module into your code takes less than 10 mins and contains j
 
 1. Is SNS module set-up a compulsory procedure to receive notifications?
     * Yes.
-    * No, notifications can be received directly via EPNS crypto front-ends as well. [✅]
+    * No, notifications can be received directly via Push crypto front-ends as well. [✅] 
 
 2. Why is SNS module useful?
     * Allows sending gasless transactions.
     * Simplifies the load for developers in order to receive notification [✅]
     * Both
 ---
-# EPNS SDK
+# Push SDK
 
-EPNS SDK is a growing Monorepo of packages that provide solutions for a wide range of development tasks one might come across while building on top of EPNS protocol.
+Push SDK is a growing Monorepo of packages that provide solutions for a wide range of development tasks one might come across while building on top of Push protocol.
 
 It is a Javascript-based group of packages that helps developers to:
 * Send notifications
 * Subscribe (opt in) / Unsubscribe (opt out)
-* Build EPNS features into their dApps
+* Build Push features into their dApps
 * Enable Access to Push Nodes APIs
 * Render Default Notifications UI, etc
 
@@ -343,7 +363,7 @@ It is a Javascript-based group of packages that helps developers to:
 It is written in Typescript and supports React, React Native, Plain JS, and Node JS-based platforms. (We are adding support for more!).
 It is also built on top of standard Web3 packages like *ethers, @web3-react*
 
-## EPNS SDK Features
+## Push SDK Features
 
 The SDK provides us with the following imperative features:
 * Sending Notifications
@@ -359,94 +379,104 @@ The SDK provides us with the following imperative features:
 
 ## Questions
 
-1. Which of the following process can not be done using EPNS SDK?
+1. Which of the following process can not be done using Push SDK?
     * Sending Notifications
     * Fetching or Searching any channel details
-    * Creating a channel [✅]
+    * Creating a channel [✅] 
     * All of the above-mentioned processes are possible using SDK
 
-2. What languages/Platforms does the EPNS SDK support?
+2. What languages/Platforms does the Push SDK support?
     * React and React-Native
     * Javascript
     * Node JS-based platforms.
-    * All of the above. [✅]
+    * All of the above. [✅] 
+
 ---
-# EPNS Starter Kit
+# PUSH-SDK starter kit
 
-The SDK starter-kit is meant to showcase developers on how to use the EPNS SDK packages -
+This starter-kit is meant to showcase developers on how to use the PUSH SDK packages - 
 
-* [@epnsproject/sdk-restapi](https://www.npmjs.com/package/@epnsproject/sdk-restapi) Provides access to EPNS backend APIs.
+* [@pushprotocol/restapi](https://www.npmjs.com/package/@pushprotocol/restapi) Provides access to PUSH backend APIs.
+* [@pushprotocol/uiweb](https://www.npmjs.com/package/@pushprotocol/uiweb) Provides React based components to show Notifications, Spam, SubscribedModal etc for dApps.
+* [@pushprotocol/uiembed](https://www.npmjs.com/package/@pushprotocol/uiembed) Provides vanilla JS sidebar notifications for any  dApp.
 
-* [@epnsproject/sdk-uiweb](https://www.npmjs.com/package/@epnsproject/sdk-uiweb) Provides React based components to show Notifications, Spam, SubscribedModal etc for dApps.
+* [@pushprotocol/socket](https://www.npmjs.com/package/@pushprotocol/socket) Provides a socket client to connect with Push Websockets
 
-* [@epnsproject/sdk-uiembed](https://www.npmjs.com/package/@epnsproject/sdk-uiembed) Provides vanilla JS sidebar notifications for any dApp.
-
-> CRA-Typescript
+### CRA-Typescript
 This particular kit is built out using CRA, Typescript. The SDK packages should also work out for React using plain JS.
 
-## How to get started with the SDK Starter Kit?
-
+## Getting started
+```bash
+git clone https://github.com/ethereum-push-notification-service/push-sdk-starter-kit.git
 ```
-git clone https://github.com/ethereum-push-notification-service/epns-sdk-starter-kit.git
 
-cd epns-sdk-starter-kit
+```bash
+cd push-sdk-starter-kit
+```
 
+```bash
 yarn install
+```
+```bash
 yarn start
 ```
 
-### Dependencies
+## Dependencies
+If your are trying to build out a separate dApp following this starter-kit example, some of the following dependencies are needed for the SDK and any dApp to work.
 
-If you are trying to build out a separate dapp following this starter-kit example, some of the following dependencies might be required for the SDK and any dApp to work.
+1. `@pushprotocol/uiweb` has a `peerDependency` on `styled-components`
 
-1. @epnsproject/sdk-uiweb has a peerDependency on styled-components
+```bash
+yarn add styled-components
+```
 
-    `yarn add styled-components`
+2. Since its a dApp, the following are the **web3** dependencies that you can install for wallet connection
+```bash
+ yarn add ethers
+```
 
-2. Since its a dApp, the following are the web3 dependencies that you can install for wallet connection
- ` yarn add ethers`
+3. Needed only if you are using [web3-react](https://github.com/Uniswap/web3-react). You are free to use any other React based web3 solution.
+```bash
+yarn add @web3-react/core @web3-react/injected-connector
+```
 
-3. The next package might only be needed if you are using web3-react. *You are free to use any other React based web3 solution.*
+**But no need to install these if you are using the `starter-kit` itself since we have already installed these for you so that you can focus on how to use the PUSH-SDK packages**
 
-`yarn add @web3-react/core @web3-react/injected-connector`
+## App walkthrough
 
-> **Note:** *No need to install these if you are using the starter-kit itself since we have already installed these for you so that you can focus on how to use the EPNS-SDK packages*
-
-## Quick Walkthrough of the App
-The App has the following features-
 The App has following features-
 
 | Page    | Features    | SDK package used |
 |----------|---------|---------|
-| Notifications    | notifications, <br/>spams, <br/>subscribed modal  |  @epnsproject/sdk-uiweb, <br/>@epnsproject/sdk-restapi    |
-| Channels     | get channel details for a specific channel, <br/>search for channel(s), <br/>get channel subscribers, <br/>is the logged-in user subscribed to the channel, <br/>opt in a channel, <br/>opt out a channel  | @epnsproject/sdk-restapi      |
-| Payloads     | send notification for different use cases  | @epnsproject/sdk-restapi      |
-| Embed | sidebar notifications for the logged in user if subscribed on EPNS  |   @epnsproject/sdk-uiembed    |
-
+| Notifications    | notifications, <br/>spams, <br/>subscribed modal  |  @pushprotocol/uiweb, <br/>@pushprotocol/restapi    |
+| Channels     | get channel details for a specific channel, <br/>search for channel(s), <br/>get channel subscribers, <br/>is the logged-in user subscribed to the channel, <br/>opt in a channel, <br/>opt out a channel  | @pushprotocol/restapi      |
+| Payloads     | send notification for different use cases  | @pushprotocol/restapi      |
+| Embed | sidebar notifications for the logged in user if subscribed on PUSH protocol  |   @pushprotocol/uiembed    |
 ## Questions
 1. Which of the following packages should be used for including a notification sidebar in any dapp?
-  * @epnsproject/sdk-uiweb
-  * @epnsproject/sdk-uiembed [✅]
-  * @epnsproject/sdk-restapi
+  * @pushprotocol/uiweb
+  * @pushprotocol/uiembed [✅] 
+  * @pushprotocol/restapi
   * Any one of them can be used.
 
 2. You want to fetch details about a specific Channel using SDK, which package will you use?
-  * @epnsproject/sdk-uiweb
-  * @epnsproject/sdk-uiembed [✅]
-  * @epnsproject/sdk-restapi
+  * @pushprotocol/uiweb
+  * @pushprotocol/uiembed
+  * @pushprotocol/restapi [✅] 
   * Any one of them can be used.
 
-3. Which of the following feature is not provided by the @epnsproject/sdk-restapi package?
+3. Which of the following feature is not provided by the @pushprotocol/restapi package?
   * Opt-out from a channel
   * Fetching notifications for a given user address
   * Fetching User subscriptions
   * Providing UI components to showcase notifications, spam etc for dapps.[✅]
+
 ---
 ## Showrunners
 
 The showrunners framework is a scaffold that developers can use to build out notifications for their use cases.
 
-Showrunners framework provides the tools and helpers required for constructing the payload and sending the notification using the EPNS infrastructure.
+Showrunners framework provides the tools and helpers required for constructing the payload and sending the notification using the Push infrastructure.
 
 Out-of-the-box showrunners provide the developer with a scheduling engine and libraries and helpers for easy access to blockchain data as well as web2 data sources.
 
@@ -456,7 +486,7 @@ Hello World channel exists to simply demonstrate how easy it is to send notifica
 To setup the channel, you will need to do the following steps:
 
 * Ensure that you have [created your own channel](https://docs.epns.io/developers/developer-zone/create-your-notif-channel) and make a ***note of the private key used for the same.***
-* Head to `src/sample_showrunners` from the git clone of epns-showrunners-framework-staging which you had done earlier.
+* Head to `src/sample_showrunners` from the git clone of [push-showrunners-framework-staging](https://github.com/ethereum-push-notification-service/push-showrunners-framework-staging) which you had done earlier.
 * Copy the folder helloWorld and drop it in src/showrunners folder.
 
 > You might notice that the showrunners has already moved to complain about helloWorldKeys.json not containing the correct private key.
@@ -520,18 +550,18 @@ This file is based on [AWS-SNS](https://aws.amazon.com/sns/?whats-new-cards.sort
 ## Questions:
 1. Which one of the following features is not provided by Showrunners?
     * Tools and Helpers required to create payloads
-    * Creating a Channel on EPNS Protocol [✅]
+    * Creating a Channel on EPNS Protocol  [✅]
     * Building out notifications for specific use cases.
     * All above-mentioned features are provided by showrunners.
 
 2. Which of the following files not a compulsion in Channel Directory?
     * channelKeys.json
-    * channelJobs.js [✅]
+    * channelJobs.js  [✅]
     * channelChannel.js
     * All of the above
 
 3. Which of the following files(*in channel directory*) contains the actual logic of the channel?
-    * channelChannel.js [✅]
+    * channelChannel.js  [✅]
     * channelJobs.js
     * channelKeys.json
     * None
@@ -544,10 +574,12 @@ This file is based on [AWS-SNS](https://aws.amazon.com/sns/?whats-new-cards.sort
 1. [**Developer Documentations**](https://docs.epns.io/developers/)
 2. [**EPNS Github**](https://github.com/ethereum-push-notification-service)  
 3. **EPNS SDK Packages:**
-* [@epnsproject/sdk-restapi](https://www.npmjs.com/package/@epnsproject/sdk-restapi) Provides access to EPNS backend APIs.
-* [@epnsproject/sdk-uiweb](https://www.npmjs.com/package/@epnsproject/sdk-uiweb) Provides React based components to show Notifications, Spam, SubscribedModal etc for dApps.
-* [@epnsproject/sdk-uiembed](https://www.npmjs.com/package/@epnsproject/sdk-uiembed) Provides vanilla JS sidebar notifications for any dApp.
+* [@pushprotocol/restapi](https://www.npmjs.com/package/@pushprotocol/restapi) Provides access to PUSH backend APIs.
+* [@pushprotocol/uiweb](https://www.npmjs.com/package/@pushprotocol/uiweb) Provides React based components to show Notifications, Spam, SubscribedModal etc for dApps.
+* [@pushprotocol/uiembed](https://www.npmjs.com/package/@pushprotocol/uiembed) Provides vanilla JS sidebar notifications for any  dApp.
+
+* [@pushprotocol/socket](https://www.npmjs.com/package/@pushprotocol/socket) Provides a socket client to connect with Push Websockets
 
 ---
-1. Explore the [EPNS dapp ](https://app.epns.io/)
+1. Explore the [EPNS dapp ](https://app.push.org/#/channels)
 2. Connect with us on [Discord](https://discord.gg/epns)
