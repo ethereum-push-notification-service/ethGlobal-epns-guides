@@ -28,7 +28,7 @@ Being an open communication middleware, notifications can be integrated and show
     * All of the above [✅]
 
 ## Questions
-1. What layer of web3 is EPNS?
+1. What layer of web3 is Push?
     * Communication [✅]
     * Computation
     * Storage
@@ -38,14 +38,14 @@ Being an open communication middleware, notifications can be integrated and show
     * Yes, Always
     * No, (only for on-chain notifications) [✅]
 
-3. What problem does EPNS aim to solve?
+3. What problem does Push aim to solve?
     * Enable communication between Web3 users
     * Protect users from spam and irregular communication and uphold user privacy
     * Enable web3 and web3 users to interact using their wallet addresses in a decentralized fashion
     * All of the above [✅]
 
 ---
-## 2.EPNS Concepts Section
+## 2.Push Concepts Section
 ---
 
 # What are Channels?
@@ -157,7 +157,7 @@ Push Nodes are the central piece of the network that enables the blockchain of W
 ![](https://i.imgur.com/zY9YqmS.png)
 
 ### 3 main tasks of Push Nodes
-1. **Listening**: Push Nodes listens to EPNS Communicator smart contracts on every blockchain. They also enable off-chain or direct communication via API calls either from a backend or a dApp. This enables Push to support just about any Web3 service… ie: smart contracts, dApps, backends or direct payloads.
+1. **Listening**: Push Nodes listens to Push Communicator smart contracts on every blockchain. They also enable off-chain or direct communication via API calls either from a backend or a dApp. This enables Push to support just about any Web3 service… ie: smart contracts, dApps, backends or direct payloads.
 
 2. Validating and Governing: The communication which is driven by the Push Communicator layers require validation. This validation involves ensuring that whether or not the channel exists, the channel is not spamming, the channel is cross-chain verified.le governance and to verify the existence of the channel.
 3. Admitting to Network / Dispatching: Lastly, the Push Nodes admit these notifications that are tied to wallet address in the network which can then be tapped into by any crypto frontend / wallet to display them. The dispatch functionality is also present in these nodes to allow bridging of Web3 notifications to be displayed in Web2 apps in case the wallet / frontend / software wants to enable that instead of handling direct socket connection.
@@ -309,7 +309,7 @@ Receiving notifications is a fairly simple process and can be done very easily.
 As of now, Push allows you to receive notifications directly to your wallet addresses through the crypto front-ends, in the form of SNS Notifications etc.
 
 ## Receiving notifications via Push Crypto Front-ends
-* [Using EPNS dapp](https://app.epns.io/)
+* [Using Push dapp](https://app.epns.io/)
 * [Using extension](https://chrome.google.com/webstore/detail/epns-protocol-alpha/lbdcbpaldalgiieffakjhiccoeebchmg)
 * [Using Mobile App])(https://play.google.com/store/apps/details?id=io.epns.epns&hl=en&gl=US)
 
@@ -550,7 +550,7 @@ This file is based on [AWS-SNS](https://aws.amazon.com/sns/?whats-new-cards.sort
 ## Questions:
 1. Which one of the following features is not provided by Showrunners?
     * Tools and Helpers required to create payloads
-    * Creating a Channel on EPNS Protocol  [✅]
+    * Creating a Channel on Push Protocol  [✅]
     * Building out notifications for specific use cases.
     * All above-mentioned features are provided by showrunners.
 
@@ -569,11 +569,11 @@ This file is based on [AWS-SNS](https://aws.amazon.com/sns/?whats-new-cards.sort
 # Congratulations, You are a ROCKSTAR
 
 
-## EPNS Developer Resources
+## Push Developer Resources
 
 1. [**Developer Documentations**](https://docs.epns.io/developers/)
-2. [**EPNS Github**](https://github.com/ethereum-push-notification-service)  
-3. **EPNS SDK Packages:**
+2. [**Push Github**](https://github.com/ethereum-push-notification-service)  
+3. **Push SDK Packages:**
 * [@pushprotocol/restapi](https://www.npmjs.com/package/@pushprotocol/restapi) Provides access to PUSH backend APIs.
 * [@pushprotocol/uiweb](https://www.npmjs.com/package/@pushprotocol/uiweb) Provides React based components to show Notifications, Spam, SubscribedModal etc for dApps.
 * [@pushprotocol/uiembed](https://www.npmjs.com/package/@pushprotocol/uiembed) Provides vanilla JS sidebar notifications for any  dApp.
@@ -581,5 +581,5 @@ This file is based on [AWS-SNS](https://aws.amazon.com/sns/?whats-new-cards.sort
 * [@pushprotocol/socket](https://www.npmjs.com/package/@pushprotocol/socket) Provides a socket client to connect with Push Websockets
 
 ---
-1. Explore the [EPNS dapp ](https://app.push.org/#/channels)
+1. Explore the [Push dapp ](https://app.push.org/#/channels)
 2. Connect with us on [Discord](https://discord.gg/epns)
